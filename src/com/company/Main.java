@@ -35,5 +35,6 @@ public class Main {
     //Apvalinam.
     DecimalFormat df = new DecimalFormat("####0.00");
     System.out.println("Vandens yra: " + df.format(atsakymas) +" kubiniai metrai");
+    System.out.println("Bandykite dar karta :)");
   }
 }

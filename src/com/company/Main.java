@@ -1,6 +1,6 @@
 package com.company;
 
-import java.text.DecimalFormat;
+//import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -33,8 +33,8 @@ public class Main {
     atsakymas = plotas * gylis;
 
     //Apvalinam.
-    DecimalFormat df = new DecimalFormat("####0.00");
-    System.out.println("Vandens yra: " + df.format(atsakymas) +" kubiniai metrai");
+//    DecimalFormat df = new DecimalFormat("####0.00");
+    System.out.printf("Vandens yra: %1$4.2f kubiniai metrai.",atsakymas, plotas);
 
   }
 }

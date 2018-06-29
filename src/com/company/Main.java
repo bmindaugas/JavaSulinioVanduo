@@ -34,7 +34,7 @@ public class Main {
 
     //Apvalinam.
 //    DecimalFormat df = new DecimalFormat("####0.00");
-    System.out.printf("Vandens yra: %1$4.2f kubiniai metrai.",atsakymas, plotas);
+    System.out.printf("Vandens yra: %4.2f kubiniai metrai.",atsakymas);
 
   }
 }

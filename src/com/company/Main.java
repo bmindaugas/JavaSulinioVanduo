@@ -1,40 +1,17 @@
 package com.company;
-
 //import java.text.DecimalFormat;
-import java.util.Scanner;
-
+//import java.util.Scanner;
 public class Main {
-
   public static void main(String[] args) {
 
-    //Šulinio vandens kubatūros skaičiuoklė.
-    Scanner klavetura = new Scanner(System.in);
+    Skaicavimai sulinioTurisObj = new Skaicavimai();
+    Double ats = sulinioTurisObj.sulinioTuris();
 
-    //Šulinio deametras metrais.
-    double deametras;
-    System.out.println("Įveskite šulinio deametra metrais: ");
-    deametras = klavetura.nextDouble();
+    SaveObject.save(ats, "atsakymas.txt");
+    Double dokumentoNuskaitymas = (Double) SaveObject.restore("atsakymas.txt");
 
-    //Vandens gylis metrais.
-    double gylis;
-    System.out.println("Įveskite šulinio vandens gylį metrais: ");
-    gylis = klavetura.nextDouble();
-
-    //Spindulys.
-    double r;
-    r = deametras / 2;
-
-    //Apskritimo plotas.
-    double plotas;
-    plotas = Math.PI * r * r;
-
-    //Atsakymas.
-    double atsakymas;
-    atsakymas = plotas * gylis;
-
-    //Apvalinam.
-//    DecimalFormat df = new DecimalFormat("####0.00");
-    System.out.printf("Vandens yra: %4.2f kubiniai metrai.",atsakymas);
-
+//  //Apvalinam.
+//  //DecimalFormat df = new DecimalFormat("####0.00");
+    System.out.printf("Vandens yra: %4.2f kubiniai metrai.", dokumentoNuskaitymas);
   }
 }
